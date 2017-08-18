@@ -1,0 +1,235 @@
+/*
+ Delete import statement on production
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+
+/*
+ --------------------------------------------------
+*/
+
+#cmf-wrap {
+  text-align: center;
+  color: #414143;
+  width: 1170px;
+  margin: 50px auto 0px;
+  font-family:  'Open sans', sans-serif;
+}
+
+#cmf-wrap h3 {
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+
+.cmf-row {
+  position: relative;
+  overflow: auto;
+  padding: 20px;
+}
+
+.col-header {
+  border: 1px solid #d4d4d4;
+  padding: 10px 0px 10px;
+  width: 100%;
+  margin: 0px auto;
+  background: #f5f5f5;
+}
+
+.cmf-col {
+  display: inline-block;
+  width: 33%;
+  transition: 0.2s ease-in all;
+}
+
+.track-box {
+  height: 155px;
+}
+
+.track-box h3 {
+  position: relative;
+  top: 30%;
+  color: #222;
+}
+
+
+.cmf-info-box {
+  padding: 10px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  font-weight: bold;
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-bottom: 2px solid;
+}
+
+.career-path-col .cmf-info-box:first-child,
+a.level-btn:first-of-type div 
+{
+
+  border-top: 2px solid;
+}
+
+
+
+.bordered-top {
+	border-top: 2px solid !important;
+	/*utility class to force border top on special ocassions*/
+}
+
+
+
+
+
+/* Support Track Styles */
+
+.support-row .cmf-info-box {
+  background-color: #fff;
+  color: #eb7e02;
+  border-color: #eb7e02;
+ 
+} 
+
+.support-row .cmf-info-box:hover {
+  background-color: #ffc637;
+  color: #FFF
+}
+
+.support-row .cmf-info-box-selected {
+	background-color: #dd7909;
+  color: #FFF;
+}
+
+
+
+
+/* Techincal Track Styles */
+
+.technical-row .cmf-info-box {
+  background-color: #fff;
+  color: #519051;
+  border-color: #519051;
+} 
+
+.technical-row .cmf-info-box:hover {
+  background-color: #62c462;
+  color: #FFF
+}
+
+.technical-row .cmf-info-box-selected {
+  background-color: #519051;
+  color: #FFF;
+}
+
+
+/* Managerial Track syles */
+
+.managerial-row .cmf-info-box {
+  background-color: #fff;
+  color: #0072c6;
+  border-color: #0072c6;
+} 
+
+.managerial-row .cmf-info-box:hover {
+  background-color: #0072c6;
+  color: #FFF
+}
+
+.managerial-row .cmf-info-box-selected {
+	background-color: #005898;
+  color: #FFF;
+}
+
+
+
+
+.role-col a {
+  text-decoration: none !important;
+}
+
+.vertical-centered-box {
+  
+  transform: translateY(-43%);
+  -ms-transform: translateY(-43%);
+
+} 
+
+
+
+.cmf-col-hidden {
+  opacity: 0;
+ 
+}
+
+.cmf-col-visible {
+  opacity: 1;
+ 
+}
+
+
+/** Line Styles
+---------------------*/
+.line-1 {
+  height: 2px;
+  border-top: 2px solid #519051;
+  width: 133px;
+  transform: translateX(-15%) translateY(-36px) rotate(37deg);
+}
+
+.line-2 {
+  height: 2px;
+  border-top: 2px solid #519051;
+  width: 175px;
+  transform: translateX(-18%) translateY(60px) rotate(-45deg);
+}
+
+
+.line-3 {
+  height: 2px;
+  border-top: 2px solid #0072c6;
+  width: 48px;
+  transform: translateX(-84%) translateY(25px) rotate(-39deg);
+}
+
+.line-4 {
+  height: 2px;
+  border-top: 2px solid #0072c6;
+  width: 49px;
+  transform: translateX(-89%) translateY(-33px) rotate(39deg);
+}
+
+
+.line-5 {
+  height: 2px;
+  border-top: 2px solid #dd7909;
+  width: 64px;
+  transform: translateX(-87%) translateY(32px) rotate(-37deg);
+}
+
+
+.line-6 {
+	height: 2px;
+	border-top: 2px solid #dd7909;
+	width: 88px;
+	transform: translateX(-86%) translateY(-47px) rotate(43deg);
+}
+
+
+
+
+
+
+
+/* disabled styles*/
+
+.level-btn-disabled div {
+  color: #d3d3d3 !important;
+  border-color: #f5f5f5 !important;
+  cursor: not-allowed;
+}
+
+.level-btn-disabled div:hover {
+  background-color: white !important;
+}
