@@ -1,6 +1,6 @@
-# IDB CMF Roles Portrait
+# BID Perfiles de Roles
 
-An interactive diagram for the web.
+Un diagrama interactivo para la web.
 
 ## Installation instructions
 
