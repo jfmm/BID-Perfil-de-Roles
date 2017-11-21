@@ -1,4 +1,7 @@
 (function ($) {
+	
+	// initialize Bootstrap tooltip plugin...
+	$('[data-toggle="tooltip"]').tooltip();
   
   //declare JSON Object with IDB Doc ID numbers
   var pathLevelDocs = {
@@ -218,24 +221,36 @@
     
     var thisButton = $(this), // get button instance clicked
         path = thisButton.data("path"); // get the career path value  of the button selected
-    	
-  
     
+		// first hide the elements tooltip
+		thisButton.tooltip("hide");
+		
+		// if the box had already been selected
+    if(thisButton.hasClass("cmf-info-box-selected")) {
+		
+			//hide its Work role column
+      thisButton.parent()
+								.siblings(":not(.track-box)") 
+								.removeClass("cmf-col-visible cmf-info-box-selected")
+								.addClass("cmf-col-hidden");
+								
+		} else {
+			
+			//show Work role column
+      thisButton.parent()
+								.siblings()
+								.removeClass("cmf-col-hidden")
+								.addClass("cmf-col-visible");
+		}
+			
     
    // if there's a button already selected, deselect it  
 		if(button.hasClass("cmf-info-box-selected")) 
           button.removeClass("cmf-info-box-selected");
       
 		
-      //then add selected class to button that was clicked
+    //then add selected class to button that was clicked
       thisButton.addClass("cmf-info-box-selected");
-      
-     
-      //show Work role column
-      thisButton.parent()
-								.siblings()
-								.removeClass("cmf-col-hidden")
-								.addClass("cmf-col-visible");
       
       
       //hide the irrelevant Work role columns
@@ -257,14 +272,14 @@
 
 		for(var i = 0; i < level.length; i++) {
 
-			var currentBtn = level[i];
+			var $currentBtn = $(level[i]);//cache jquery obj reference
 
 			// disable/enable buttons according to path
-			if(currentBtn.dataset.for !== path) 
-				$(currentBtn).addClass("level-btn-disabled").removeAttr("target");
+			if($currentBtn.data("relatedpath") !== path) 
+				$currentBtn.addClass("level-btn-disabled").removeAttr("target");
 	
 			 else 
-				$(currentBtn).removeClass("level-btn-disabled").attr("target", "_blank");
+				$currentBtn.removeClass("level-btn-disabled").attr("target", "_blank");
 			
 		}
 	} 
